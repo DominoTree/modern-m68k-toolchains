@@ -1,0 +1,13 @@
+[build]
+target = "m68k-tos.json"
+
+[unstable]
+build-std = ["core", "compiler_builtins"]
+json-target-spec = true
+
+[target.m68k-tos]
+rustflags = [
+    "-C", "link-arg=--relocatable",
+    "-C", "link-arg=--gc-sections",
+    "-C", "link-arg=--script=prg.ld",
+]

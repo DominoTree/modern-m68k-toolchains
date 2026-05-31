@@ -1,0 +1,18 @@
+{
+  "llvm-target": "m68k-unknown-none-elf",
+  "data-layout": "E-m:e-p:32:16:32-i8:8:8-i16:16:16-i32:16:32-n8:16:32-a:0:16-S16",
+  "arch": "m68k",
+  "cpu": "M68000",
+  "target-endian": "big",
+  "target-pointer-width": 32,
+  "os": "none",
+  "linker-flavor": "ld",
+  "linker": "m68k-elf-ld",
+  "panic-strategy": "abort",
+  "relocation-model": "static",
+  "code-model": "small",
+  "eh-frame-header": false,
+  "max-atomic-width": 32,
+  "atomic-cas": false,
+  "no-default-libraries": true
+}

@@ -1,0 +1,16 @@
+[build]
+target = "m68k-mac.json"
+
+[unstable]
+build-std = ["core", "compiler_builtins"]
+json-target-spec = true
+
+# Full static link at base 0 (classic Mac CODE segment), not a relocatable
+# object: a Mac CODE segment carries no load-time relocation, so the link must
+# resolve everything PC-relative. app.ld places _start first at offset 0.
+[target.m68k-mac]
+rustflags = [
+    "-C", "link-arg=-static",
+    "-C", "link-arg=--gc-sections",
+    "-C", "link-arg=--script=../common/app.ld",
+]

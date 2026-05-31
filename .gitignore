@@ -1,0 +1,6 @@
+# Build intermediates. The final HELLO.PRG binaries ARE committed (so the demos
+# can be run without rebuilding the toolchains); only the throwaway objects and
+# ELF/cargo build trees are ignored.
+*.o
+*.elf
+target/

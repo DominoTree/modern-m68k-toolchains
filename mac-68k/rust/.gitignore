@@ -1,0 +1,7 @@
+*.o
+app.elf
+app.bin
+build/
+*.pyc
+__pycache__/
+# keep committed: HELLO.bin, HELLO.rsrc, screenshot.png
